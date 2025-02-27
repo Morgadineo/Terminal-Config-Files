@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'tversteeg/quick-scope'
 call plug#end()
 
 set termguicolors
@@ -8,34 +9,21 @@ set number            " Mostrar números nas linhas
 set expandtab ts=4 sw=4 ai " Configurações de indentação
 set noexpandtab       " Desabilita a expansão de tabs (se preferir manter)
 set signcolumn=no
+set foldmethod=indent
 
 syntax enable         " Habilitar destaque de sintaxe
 
 inoremap <silent><expr> <Tab> pumvisible() ? coc#_select_confirm() : "\<Tab>"
 
 autocmd FileType python syntax match pythonSelf /\<self\>/
-highlight pythonSelf ctermfg=LightGreen guifg=LightGreen
-
-" Configurar CTRL-DEL para apagar a palavra à esquerda
-inoremap <C-Del> <C-W>
+highlight pythonSelf ctermfg=Red guifg=Red
 
 " Alterar as cores do menu de sugestões no coc.nvim
-
-" Cor de fundo do menu de sugestões
 highlight PMenu ctermbg=DarkGray guibg=#2e2e2e
-
-" Cor do texto do menu de sugestões
 highlight PMenu ctermfg=White guifg=#FFFFFF
-
-" Cor de fundo da sugestão selecionada
 highlight PMenuSel ctermbg=Blue guibg=#4e82ff
-
-" Cor do texto da sugestão selecionada
 highlight PMenuSel ctermfg=Black guifg=#000000
-
-" Cor de fundo do "thumb" (parte que destaca o item selecionado)
 highlight PMenuThumb ctermbg=White guibg=#c1c1c1
-
 
 " Quebra de linha automática para parágrafos grandes
 set textwidth=80         " Largura máxima da linha (pode ajustar conforme preferir)
