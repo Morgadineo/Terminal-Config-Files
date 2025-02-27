@@ -1,0 +1,13 @@
+{
+  "python.jediEnabled": true,
+  "python.jediPath": "/usr/lib/python3/dist-packages",
+  "python.pythonPath": "python",
+  "python.autoComplete.addBrackets": true,
+  "suggest.autoTrigger": "always",        
+  "suggest.enablePreselect": true,        
+  "suggest.noselect": false,     
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+  "suggest.acceptSuggestionOnTab": true,
+  "suggest.minTriggerInputLength": 2 
+}
+
