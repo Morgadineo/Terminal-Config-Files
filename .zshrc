@@ -16,6 +16,14 @@ export PATH="$HOME/.local/bin:$PATH"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 DISABLE_AUTO_TITLE="true"
+function clear() {
+	command clear
+	figlet -w 300 -f Delta\ Corps\ Priest\ 1 "Morgado" | lolcat
+}
+
+ZSH_THEME="agnoster"
+DISABLE_AUTO_TITLE="true"
+ENABLE_CORRECTION="true"
 
 HIST_STAMPS="dd/mm/yyyy"
 
